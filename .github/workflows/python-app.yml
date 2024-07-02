@@ -37,7 +37,6 @@ jobs:
 
 runapp:
     runs-on: ubuntu-latest
- 
     steps:
     - uses: actions/checkout@v4
     - name: Set up Python 3.10
@@ -52,5 +51,5 @@ runapp:
 
     - uses: actions/upload-artifact@v4
 	    with:
-      name: python-app-artc
-      path: output.txt
+	      name: python-app-artc
+	      path: output.txt
