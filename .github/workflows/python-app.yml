@@ -47,9 +47,9 @@ jobs:
 	  run: python main.py
    
 	- name: Save Output
-	  run: echo "$({{ steps.run_python_app.outpus.stdout }}" > output.txt
+	  run: echo "${{ steps.run_python_app.outputs.stdout }}" > output.txt
 
   - uses: actions/upload-artifact@v4
-     with:
+	    with:
       name: python-app-artc
       path: output.txt
